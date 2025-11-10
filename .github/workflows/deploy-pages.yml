@@ -17,7 +17,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v1
+        # use v2 which depends on the supported upload-artifact action
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./
 
