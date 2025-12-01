@@ -37,7 +37,7 @@ jobs:
           else echo "output_dir=." >> $GITHUB_OUTPUT
           fi
 
-      - name:debug: print run id and show files being uploaded
+      - name: print run id and show files being uploaded
         run: |
           echo "GITHUB_RUN_ID=$GITHUB_RUN_ID"
           echo "Uploading from: ${{ steps.detect.outputs.output_dir }}"
@@ -52,7 +52,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Debug: show artifact and run info
+      - name: show artifact and run info
         run: |
           echo "Deploying run id: $GITHUB_RUN_ID"
           echo "Listing artifacts for this run:"
