@@ -37,7 +37,7 @@ jobs:
           else echo "output_dir=." >> $GITHUB_OUTPUT
           fi
 
-      - name: Debug: print run id and show files being uploaded
+      - name:debug: print run id and show files being uploaded
         run: |
           echo "GITHUB_RUN_ID=$GITHUB_RUN_ID"
           echo "Uploading from: ${{ steps.detect.outputs.output_dir }}"
