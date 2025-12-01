@@ -1,1 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Narendra Kumar</title>
+
+  <style>
+    :root{--primary-bronze:#cd7f32;--light-bronze:#e5a75e;--dark-bronze:#8b5a2b;--black-bg:#0a0a0a;--card-black:#1a1a1a;--text-light:#e0e0e0;--text-muted:#a0a0a0}*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,ui-sans-serif,syst[...]/* styles truncated for brevity */
+  </style>
+
+</head>
+<body>
+  <!-- Complete Integrated Portfolio -->
+<section id="hero">
+  <div class="hero-content">
+        <div class="profile-photo-container">
+      <img src="https://i.ibb.co/s9LH2vqf/my-photo.jpg" alt="CMA Narendra Kumar" class="profile-photo">    </div>
+    <div class="hero-badge">✨ finance controller at eternity pools and gardens private limited</div>
+    <h1 class="hero-title">
+      Transforming Financial Data into <span class="highlight">Strategic Business Insights</span>
+    </h1>
+    <p class="hero-subtitle">Cost and Management Accountant | Financial Analysis Expert | AI Consultant</p>
+    <p class="hero-description">Specialized in inventory management, financial accounting, stock auditing, and AI-driven business automation.</p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn-primary">View My Projects</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <p>As a qualified Cost and Management Accountant from the Institute of Cost Accountants of India (ICMAI), I bring a unique blend of financial expertise and technological innovation. I successfully combine accounting rigour with automation to deliver actionable insights.</p>
+      <p>During my tenure at SURESH Flavours and Extracts, I maintained accurate GST records, managed accounts, prepared budgets and forecasts. My experience extends to Input Tax Credit management and working closely with cross-functional teams to ensure financial accuracy.</p>
+      <p>I am passionate about leveraging AI and automation to optimize financial workflows. With expertise in Excel, VBA, SAP FICO, and data analysis, I transform complex financial data into actionable business recommendations.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section bg-dark">
+  <div class="container">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="job-title">Finance Controller</h3>
+          <p class="company">Eternity Pools and Gardens Private Limited</p>
+          <p class="duration">1 December 2025 - Present</p>
+          <ul class="achievements">
+            <li>Develop finance strategy to support business growth and profitability.</li>
+            <li>Design and implement Management Information Systems (MIS) for timely insights and decision-making.</li>
+            <li>Implement and configure Zoho Books for accounting, invoicing, and reconciliations.</li>
+            <li>Create and roll out a bonus and compensation strategy aligned with company objectives.</li>
+            <li>Lead budgeting, forecasting, financial reporting, and compliance activities.</li>
+            <li>Drive process improvements and strengthen internal controls.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="job-title">Accountant</h3>
+          <p class="company">SURESH FLAVOURS AND EXTRACTS PRIVATE LIMITED</p>
+          <p class="duration">Apr 2023 - Jun 2024 · 1 yr 3 mos</p>
+          <ul class="achievements">
+            <li>Maintained accurate GST-related records and invoice management</li>
+            <li>Managed Input Tax Credit reconciliation with suppliers</li>
+            <li>Processed AR/AP ensuring timely payments and collections</li>
+            <li>Prepared budgets and forecasts for strategic planning</li>
+            <li>Conducted variance analysis and reconciliations</li>
+            <li>Performed comprehensive stock audits</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="job-title">Sales Person</h3>
+          <p class="company">Sr novelty and sports</p>
+          <p class="duration">Mar 2017 - Aug 2022 · 5 yrs 6 mos</p>
+          <ul class="achievements">
+            <li>Managed daily operations for retail outlet</li>
+            <li>Analyzed sales trends to optimize inventory</li>
+            <li>Provided exceptional customer service</li>
+            <li>Handled financial accounting and transactions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon">📁</div>
+        <h3>Inventory Management Tool</h3>
+        <p class="project-date">Oct 2025 - Nov 2025</p>
+        <p class="project-description">Automated inventory system using Excel VBA with real-time alerts, dynamic reporting, and intuitive UI.</p>
+        <div class="project-tags">
+          <span>Advanced Excel</span>
+          <span>VBA</span>
+          <span>Automation</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">📈</div>
+        <h3>Excel Financial Visualizations</h3>
+        <p class="project-date">Sep 2025</p>
+        <p class="project-description">Dynamic Excel visualizations with interactive dashboards for comprehensive business intelligence.</p>
+        <div class="project-tags">
+          <span>Data Analysis</span>
+          <span>Excel</span>
+          <span>Financial Analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section bg-dark">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-tag">Advanced Excel</div>
+      <div class="skill-tag">VBA Programming</div>
+      <div class="skill-tag">SAP FICO</div>
+      <div class="skill-tag">Financial Analysis</div>
+      <div class="skill-tag">Data Analysis</div>
+      <div class="skill-tag">Inventory Management</div>
+      <div class="skill-tag">Cost Accounting</div>
+      <div class="skill-tag">GST Compliance</div>
+      <div class="skill-tag">Budgeting</div>
+      <div class="skill-tag">Tally ERP</div>
+      <div class="skill-tag">Zoho</div>
+      <div class="skill-tag">Auditing</div>
+      <div class="skill-tag">AI Consulting</div>
+      <div class="skill-tag">Problem Solving</div>
+      <div class="skill-tag">Business Admin</div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications" class="section">
+  <div class="container">
+    <h2 class="section-title">Certifications & Licenses</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🎯</div>
+        <h3>Accenture UK - Strategy Consulting Job Simulation</h3>
+        <p class="cert-issuer">Accenture</p>
+        <p class="cert-date">Issued Nov 2025</p>
+        <div class="cert-tags">
+          <span>Business Analysis</span>
+          <span>Data Analysis</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏆</div>
+        <h3>Certificate of Merit</h3>
+        <p class="cert-issuer">Institute of Cost Accountants of India</p>
+        <p class="cert-date">Issued Oct 2025</p>
+        <div class="cert-tags">
+          <span>Consistency</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📁</div>
+        <h3>SEBI Investor Awareness Certificate</h3>
+        <p class="cert-issuer">SEBI</p>
+        <p class="cert-date">Issued Oct 2025 · Expires Oct 2027</p>
+        <div class="cert-tags">
+          <span>Investment</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">❤️</div>
+        <h3>SAP FICO</h3>
+        <p class="cert-issuer">Institute of Cost Accountants of India</p>
+        <p class="cert-date">Issued Sep 2023</p>
+        <div class="cert-tags">
+          <span>SAP FICO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="ai-services-banner">
+      <div class="banner-icon">🧐</div>
+      <h3>Basic AI Services</h3>
+      <p>Contact me for basic AI services consultation, including: <strong>Data Analysis Automation, Simple Chatbot Development,</strong> and <strong>Workflow Optimization using Machine Learning</strong>.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <h4>Email</h4>
+        <a href="mailto:narendrakumar39062@gmail.com">narendrakumar39062@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h4>Phone</h4>
+        <a href="tel:+919398587829">+91 9398587829</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">❤️</div>
+        <h4>LinkedIn</h4>
+        <a href="https://www.linkedin.com/messaging/thread/new/?recipients=cma-narendra-kumar-596722287" target="_blank">Message on LinkedIn</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h4>Location</h4>
+        <p>Nellore, Andhra Pradesh, India</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="open-to-work" class="section bg-dark">
+  <div class="container">
+    <h2 class="section-title">Open to Opportunities</h2>
+    <p class="availability-text">✅ Available for immediate joining | Open to remote, hybrid, and on-site opportunities</p>
+    <div class="job-roles">
+      <div class="job-role">FP&A Analyst</div>
+      <div class="job-role">AI Consultant</div>
+      <div class="job-role">Cost Accountant</div>
+      <div class="job-role">Fund Accountant</div>
+      <div class="job-role">Financial Analyst</div>
+      <div class="job-role">Accountant</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 CMA Narendra Kumar. All rights reserved.</p>
+    <p>Designed with precision and passion for excellence.</p>
+  </div>
+</footer>
+
+  <script>
+    // Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({behavior: 'smooth'});
+    }
+  });
+});
+  </script>
+</body>
+</html>
