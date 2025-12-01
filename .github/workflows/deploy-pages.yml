@@ -16,11 +16,32 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Optional: add your build steps here (npm, Hugo, Jekyll, etc.)
+      # Example for Node.js sites:
+      # - name: Setup Node
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '18'
+      # - name: Install and build
+      #   run: |
+      #     npm ci
+      #     npm run build
+
+      - name: Detect static output directory
+        id: detect
+        run: |
+          if [ -d "dist" ]; then echo "output_dir=dist" >> $GITHUB_OUTPUT
+          elif [ -d "public" ]; then echo "output_dir=public" >> $GITHUB_OUTPUT
+          elif [ -d "build" ]; then echo "output_dir=build" >> $GITHUB_OUTPUT
+          elif [ -d "docs" ]; then echo "output_dir=docs" >> $GITHUB_OUTPUT
+          else echo "output_dir=." >> $GITHUB_OUTPUT
+          fi
+        shell: bash
+
       - name: Upload Pages artifact
-        # use v3 to avoid the deprecated upload-artifact v3 dependency
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./
+          path: ${{ steps.detect.outputs.output_dir }}
 
   deploy:
     needs: build
