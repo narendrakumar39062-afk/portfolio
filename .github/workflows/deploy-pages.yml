@@ -16,16 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Optional: add your build steps here (npm, Hugo, Jekyll, etc.)
-      # Example for Node.js sites:
-      # - name: Setup Node
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: '18'
-      # - name: Install and build
-      #   run: |
-      #     npm ci
-      #     npm run build
+      # Add your build steps here (if any)
 
       - name: Detect static output directory
         id: detect
@@ -36,7 +27,12 @@ jobs:
           elif [ -d "docs" ]; then echo "output_dir=docs" >> $GITHUB_OUTPUT
           else echo "output_dir=." >> $GITHUB_OUTPUT
           fi
-        shell: bash
+
+      - name: Debug: print run id and show files being uploaded
+        run: |
+          echo "GITHUB_RUN_ID=$GITHUB_RUN_ID"
+          echo "Uploading from: ${{ steps.detect.outputs.output_dir }}"
+          ls -la "${{ steps.detect.outputs.output_dir }}" || true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -47,5 +43,15 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Debug: show artifact and run info
+        run: |
+          echo "Deploying run id: $GITHUB_RUN_ID"
+          echo "Listing artifacts for this run:"
+          curl -s -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs/${GITHUB_RUN_ID}/artifacts" > artifacts.json || true
+          cat artifacts.json || true
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
+        with:
+          artifact_name: github-pages
