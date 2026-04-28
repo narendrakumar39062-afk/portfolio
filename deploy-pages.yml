@@ -1,0 +1,43 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Detect static output directory
+        id: detect
+        run: |
+          if [ -d "dist" ]; then echo "output_dir=dist" >> $GITHUB_OUTPUT
+          elif [ -d "public" ]; then echo "output_dir=public" >> $GITHUB_OUTPUT
+          elif [ -d "build" ]; then echo "output_dir=build" >> $GITHUB_OUTPUT
+          elif [ -d "docs" ]; then echo "output_dir=docs" >> $GITHUB_OUTPUT
+          else echo "output_dir=." >> $GITHUB_OUTPUT
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.detect.outputs.output_dir }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
