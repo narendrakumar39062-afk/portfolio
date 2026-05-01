@@ -93,6 +93,11 @@ const CERTIFICATIONS = [
 
 const AI_PROJECTS = [
   {
+    title: "Professional Work Folio",
+    desc: "A comprehensive Google Drive collection of my financial models, management reports, and professional deliverables.",
+    link: "https://drive.google.com/drive/folders/1y45954ZDUKHKMcottRrPsgZYFW_V_RGJ?usp=drive_link"
+  },
+  {
     title: "CA, CMA, CS Resume Maker",
     desc: "AI Agent tailored to craft professional resumes for finance professionals.",
     link: "https://gemini.google.com/gem/12PJHy3MoIIFqVh71kj2ArkDubDwPkL3F?usp=sharing"
@@ -233,12 +238,15 @@ export default function App() {
           <p className="text-xl md:text-2xl text-gray-400 font-light mb-10">
             CMA (ICMAI) | Finance Manager | NISM Research Analyst
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 md:gap-6">
             <a href="#contact" className="px-8 py-3 border border-[#D4AF37] bg-[#D4AF37]/10 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-semibold w-full sm:w-auto text-center">
               Get in Touch
             </a>
+            <a href="https://drive.google.com/drive/folders/1y45954ZDUKHKMcottRrPsgZYFW_V_RGJ?usp=drive_link" target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-semibold w-full sm:w-auto text-center">
+              Work Folio
+            </a>
             <a href="#projects" className="px-8 py-3 border border-white/20 text-white hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 uppercase tracking-widest text-sm font-semibold w-full sm:w-auto text-center">
-              View AI Portfolio
+              AI Portfolio
             </a>
           </div>
         </div>
@@ -345,9 +353,9 @@ export default function App() {
 
       {/* AI PROJECTS PORTFOLIO */}
       <section id="projects" className="py-24 px-6 max-w-6xl mx-auto bg-[#080b08]">
-        <SectionHeading title="AI Agents & Tools" icon={Code} />
+        <SectionHeading title="Work Folio & AI Agents" icon={Code} />
         <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-          A collection of custom AI agents and prompt-based tools designed to automate financial workflows, assist in professional development, and solve unique problems.
+          A comprehensive portfolio of my professional financial deliverables, alongside custom AI agents designed to automate workflows and assist in professional development.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -429,7 +437,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto text-center">
           <SectionHeading title="Get In Touch" />
           <p className="text-gray-400 mb-12 text-lg">
-            Open to fully remote / work-from-home FP&A and Finance Manager roles. Let's discuss how my expertise in finance and AI can drive value for your organization.
+            Open to roles in Bangalore, Chennai, Hyderabad, and fully remote opportunities. Also available for remote consulting in AI and Finance. Let's discuss how my expertise can drive value for your organization.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
@@ -441,9 +449,12 @@ export default function App() {
               <Phone className="w-8 h-8 text-[#D4AF37] mb-4" />
               <span className="text-white text-sm">+91 93985 87829</span>
             </div>
-            <div className="flex flex-col items-center p-6 border border-[#2d3a1b] bg-[#050605]">
+            <div className="flex flex-col items-center justify-center p-6 border border-[#2d3a1b] bg-[#050605]">
               <MapPin className="w-8 h-8 text-[#D4AF37] mb-4" />
-              <span className="text-white text-sm">Nellore, AP / Trivandrum, Kerala</span>
+              <span className="text-white text-sm text-center leading-relaxed">
+                Bangalore / Chennai / Hyderabad / Remote <br/>
+                <span className="text-[#D4AF37] font-medium">Consulting (Remote Only): AI & Finance</span>
+              </span>
             </div>
           </div>
 
