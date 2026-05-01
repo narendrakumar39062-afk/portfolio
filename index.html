@@ -1,65 +1,40 @@
 import React from 'react';
-import './Portfolio.css'; // Importing CSS for styling
 
 const Portfolio = () => {
   return (
-    <div className="portfolio-container">
-      <header className="header">
-        <h1>Welcome to My Professional Portfolio</h1>
+    <div style={{ backgroundColor: '#121212', color: '#fff', padding: '20px' }}>
+      <header>
+        <h1 style={{ color: '#FFD700' }}>My Portfolio</h1>
       </header>
-      <section className="about">
+      <section id='about'>
         <h2>About Me</h2>
-        <p>I am a finance professional with a passion for technology and AI. I enjoy solving complex problems and delivering innovative solutions.</p>
+        <p>I am a finance expert with a passion for AI projects. Welcome to my portfolio!</p>
       </section>
-      <section className="skills">
+      <section id='skills'>
         <h2>Skills</h2>
         <ul>
-          <li>Finance</li>
-          <li>Technology</li>
-          <li>Artificial Intelligence</li>
+          <li>Python</li>
+          <li>Machine Learning</li>
+          <li>Data Analysis</li>
+          <li>React</li>
         </ul>
       </section>
-      <section className="experience">
+      <section id='experience'>
         <h2>Experience</h2>
-        <div className="timeline">
-          <div className="experience-item">
-            <h3>Finance Analyst at Company A</h3>
-            <p>Jan 2020 - Present</p>
-            <p>Responsibilities include financial modeling, forecasting, and analytics.</p>
-          </div>
-          <div className="experience-item">
-            <h3>Data Scientist at Company B</h3>
-            <p>Jul 2018 - Dec 2019</p>
-            <p>Worked on AI-driven projects focused on data analysis.</p>
-          </div>
-        </div>
+        <p>Worked on various projects leading finance initiatives.</p>
       </section>
-      <section className="ai-projects">
-        <h2>AI Projects</h2>
-        <ul>
-          <li>Predictive Analytics Tool</li>
-          <li>AI Chatbot Development</li>
-        </ul>
-      </section>
-      <section className="education">
+      <section id='education'>
         <h2>Education</h2>
-        <p>Bachelor's in Finance, University XYZ</p>
+        <p>Bachelor's Degree in Finance.</p>
       </section>
-      <section className="awards">
+      <section id='awards'>
         <h2>Awards</h2>
-        <p>Finance Innovator Award 2022</p>
+        <p>Received multiple awards for outstanding financial analyses.</p>
       </section>
-      <section className="certifications">
-        <h2>Certifications</h2>
-        <ul>
-          <li>Certified Financial Analyst</li>
-          <li>Machine Learning Certification</li>
-        </ul>
-      </section>
-      <footer className="footer">
+      <section id='contact'>
         <h2>Contact</h2>
         <p>Email: example@example.com</p>
-      </footer>
+      </section>
     </div>
   );
 };
