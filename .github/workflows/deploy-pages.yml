@@ -1,8 +1,8 @@
-name: Deploy static site to GitHub Pages
+name: Deploy Portfolio
 
 on:
   push:
-    branches: [ main ]
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -13,54 +13,36 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
 
-      # Optional: add your build steps here (npm, Hugo, Jekyll, etc.)
-      # Example for Node.js sites:
-      # - name: Setup Node
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: '18'
-      # - name: Install and build
-      #   run: |
-      #     npm ci
-      #     npm run build
+      - name: Install dependencies
+        run: npm install
 
-      - name: Detect static output directory
-        id: detect
-        run: |
-          if [ -d "dist" ]; then echo "output_dir=dist" >> $GITHUB_OUTPUT
-          elif [ -d "public" ]; then echo "output_dir=public" >> $GITHUB_OUTPUT
-          elif [ -d "build" ]; then echo "output_dir=build" >> $GITHUB_OUTPUT
-          elif [ -d "docs" ]; then echo "output_dir=docs" >> $GITHUB_OUTPUT
-          else echo "output_dir=." >> $GITHUB_OUTPUT
-          fi
+      - name: Build
+        run: npm run build
 
-      - name: print run id and show files being uploaded
-        run: |
-          echo "GITHUB_RUN_ID=$GITHUB_RUN_ID"
-          echo "Uploading from: ${{ steps.detect.outputs.output_dir }}"
-          ls -la "${{ steps.detect.outputs.output_dir }}" || true
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      - name: Upload Pages artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ steps.detect.outputs.output_dir }}
+          path: './dist'
 
   deploy:
-    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    needs: build
     steps:
-      - name: show artifact and run info
-        run: |
-          echo "Deploying run id: $GITHUB_RUN_ID"
-          echo "Listing artifacts for this run:"
-          curl -s -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs/${GITHUB_RUN_ID}/artifacts" > artifacts.json || true
-          cat artifacts.json || true
-
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
-        with:
-          artifact_name: github-pages
+        id: deployment
+        uses: actions/deploy-pages@v4
